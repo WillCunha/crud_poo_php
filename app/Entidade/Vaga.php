@@ -74,6 +74,15 @@ class Vaga{
         ]);
     }
 
+
+    /**
+     * Método que exclui a vaga
+     * @return boolean 
+     */
+    public function excluir(){
+        return (new Database('disponivel'))->delete('id = ' .$this->id);
+    }
+
     /**
      * Método responsável por buscar as vagas
      * @param string $where

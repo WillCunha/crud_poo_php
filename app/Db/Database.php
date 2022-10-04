@@ -148,4 +148,20 @@ class Database
 
         return true;
     }
+
+    /**
+     * Exclui os dados do banco
+     * @param string $where
+     * @return boolean
+     */
+    public function delete($where){
+        //Monta a query
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;    
+
+        //Executa a query
+        $this->execute($query);
+
+        //Retorna sucesso
+        return true;
+    }
 }
